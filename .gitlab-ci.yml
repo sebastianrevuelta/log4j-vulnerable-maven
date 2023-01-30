@@ -34,11 +34,13 @@ build-job:       # This job runs in the build stage, which runs first.
 
 sast-semgrep-app:
   stage: test
-  image: returntocorp/semgrep
+  image: openkbs/jdk11-mvn-py3
   script:
+    - python3 --version
+    - mvn --version
+    - pip3 install semgrep
     - echo $SEMGREP_APP_TOKEN
     - echo $PAT
-    - mvn --version∫
     - mvn dependency:tree -DoutputFile=maven_dep_tree.txt
     - semgrep ci
   rules:
