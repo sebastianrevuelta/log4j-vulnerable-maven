@@ -39,6 +39,7 @@ sast-semgrep-app:
     - python3 --version
     - mvn --version
     - pip3 install semgrep
+    - export PATH=$PATH:/home/$USER/.local/bin
     - echo $SEMGREP_APP_TOKEN
     - echo $PAT
     - mvn dependency:tree -DoutputFile=maven_dep_tree.txt
