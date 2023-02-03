@@ -32,7 +32,6 @@ public class HelloLog {
      md5Digest.update(password.getBytes());
      byte[] hashValue = md5Digest.digest();
      return hashValue;
-
    }
 
    private static void bad1() {
