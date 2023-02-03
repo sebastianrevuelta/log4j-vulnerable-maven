@@ -2,9 +2,7 @@
 name: Semgrep
 
 on:
-  # Scan changed files in PRs (diff-aware scanning):
-  pull_request: {}
-  # Scan mainline branches and report all findings:
+  pull_request_target:
   push:
     branches: ["master", "main"]
   # Schedule the CI job (this method uses cron syntax):
