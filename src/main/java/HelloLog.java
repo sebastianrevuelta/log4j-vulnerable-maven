@@ -36,11 +36,11 @@ public class HelloLog {
 
    private static void bad1() {
      try {
-            // ruleid: java-jwt-hardcoded-secret
-            Algorithm algorithm = Algorithm.HMAC256("secret");
-            String token = JWT.create()
-                .withIssuer("auth0")
-                .sign(algorithm);
+        // ruleid: java-jwt-hardcoded-secret
+        Algorithm algorithm = Algorithm.HMAC256("secret");
+        String token = JWT.create()
+            .withIssuer("auth0")
+            .sign(algorithm);
         } catch (JWTCreationException exception){
             //Invalid Signing configuration / Couldn't convert Claims.
         }
