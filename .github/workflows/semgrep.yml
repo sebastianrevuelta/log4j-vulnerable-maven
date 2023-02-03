@@ -3,13 +3,13 @@ name: Semgrep
 
 on:
   # Scan changed files in PRs (diff-aware scanning):
-  pull_request: {}
+  pull_request_target:: {}
   # Scan mainline branches and report all findings:
-  push:
-    branches: ["master", "main"]
+  #push:
+  #  branches: ["master", "main"]
   # Schedule the CI job (this method uses cron syntax):
-  schedule:
-    - cron: '20 17 * * *' # Sets Semgrep to scan every day at 17:20 UTC.
+  #schedule:
+  #  - cron: '20 17 * * *' # Sets Semgrep to scan every day at 17:20 UTC.
     # It is recommended to change the schedule to a random time.
 
 jobs:
