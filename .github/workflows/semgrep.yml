@@ -3,7 +3,7 @@ name: Semgrep
 
 on:
   # Scan changed files in PRs (diff-aware scanning):
-  pull_request: {}
+  pull_request_target: {}
   # Scan mainline branches and report all findings:
   push:
     branches: ["master", "main"]

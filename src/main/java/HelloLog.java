@@ -39,8 +39,8 @@ public class HelloLog {
             // ruleid: java-jwt-hardcoded-secret
             Algorithm algorithm = Algorithm.HMAC256("secret");
             String token = JWT.create()
-                .withIssuer("auth0")
-                .sign(algorithm);
+              .withIssuer("auth0")
+              .sign(algorithm);
         } catch (JWTCreationException exception){
             //Invalid Signing configuration / Couldn't convert Claims.
         }
